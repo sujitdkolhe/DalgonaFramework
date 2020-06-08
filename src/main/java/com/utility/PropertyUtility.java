@@ -12,9 +12,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import com.config.Constants;
 
-
 /**
- * This method will open FacebookPath.Propertie and return value associate with
+ * This method will open Header.Properties and return value associate with
  * key
  * 
  * @param key
@@ -25,7 +24,7 @@ public class PropertyUtility {
 	public static String getProperty(String key) {
 		String value = null;
 		try {
-			Constants.fis = new FileInputStream("Input/amazonhome_pagepath.properties");
+			Constants.fis = new FileInputStream("src/main/resources/Header.properties");
 			Properties p = new Properties();
 			p.load(Constants.fis);
 			value = p.getProperty(key);
@@ -35,16 +34,20 @@ public class PropertyUtility {
 		}
 		return value;
 	}
-	public static void captureScreenshot(WebDriver driver, String fileName) {
+
+	public static String captureScreenshot(WebDriver driver, String fileName) {
 		TakesScreenshot ts = (TakesScreenshot) Constants.driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		String dateTimeFormat = new SimpleDateFormat("yyyy-MM-dd_hh_mm_ss").format(new java.util.Date());
+		String screenshotPath = System.getProperty("user.dir") + "/Screenshot/" + fileName + " " + dateTimeFormat
+				+ ".jpg";
 		try {
-			FileUtils.copyFile(src, new File("Screenshot/" + fileName + " " + dateTimeFormat +".jpg"));
+			FileUtils.copyFile(src, new File(screenshotPath));
 		} catch (IOException e) {
 			System.out.println("Screenshot result failed");
 			e.printStackTrace();
 		}
+		return screenshotPath;
 	}
 
 }
