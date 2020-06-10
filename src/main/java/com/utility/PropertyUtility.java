@@ -24,7 +24,11 @@ public class PropertyUtility {
 	public static String getProperty(String key) {
 		String value = null;
 		try {
+<<<<<<< HEAD
 			Constants.fis = new FileInputStream("src/main/resources/Header.properties");
+=======
+			Constants.fis = new FileInputStream("C:\\Eclipse-WorkSpace\\eclipse-workspace\\DalgonaFramework-1\\src\\main\\resources\\ObjectRepository.properties");
+>>>>>>> 69a61ef8017b6b4ea022d534a1932fae71d0bcfe
 			Properties p = new Properties();
 			p.load(Constants.fis);
 			value = p.getProperty(key);
