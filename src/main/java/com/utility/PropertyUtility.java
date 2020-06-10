@@ -25,7 +25,7 @@ public class PropertyUtility {
 	public static String getProperty(String key) {
 		String value = null;
 		try {
-			Constants.fis = new FileInputStream("Input/amazonhome_pagepath.properties");
+			Constants.fis = new FileInputStream("C:\\Eclipse-WorkSpace\\eclipse-workspace\\DalgonaFramework-1\\src\\main\\resources\\ObjectRepository.properties");
 			Properties p = new Properties();
 			p.load(Constants.fis);
 			value = p.getProperty(key);
