@@ -121,9 +121,9 @@ public class Header {
 	private WebElement yourAccountText;
 	@FindBy(css = "#nav-al-your-account>a")
 	private WebElement yourAccountItems;
-	@FindBy(css= "#navSwmHoliday>a>img")
+	@FindBy(css = "#navSwmHoliday>a>img")
 	private WebElement covid19Logo;
-	@FindBy(css="span.icp-nav-flag.icp-nav-flag-in")
+	@FindBy(css = "span.icp-nav-flag.icp-nav-flag-in")
 	private WebElement indiaFlag;
 
 	// This is to Initializing the page Objects
@@ -499,16 +499,16 @@ public class Header {
 		Constants.actual = yourAccountText.getText();
 		return Constants.actual;
 	}
-	
+
 	// This method to display covid19 logo on header
 	public boolean getCovid19Logo() {
-		Constants.isDisplay =covid19Logo.isDisplayed();
+		Constants.isDisplay = covid19Logo.isDisplayed();
 		return Constants.isDisplay;
 	}
-	
+
 	// This method to display India flag on header
 	public boolean getIndiaFlag() {
-		Constants.isDisplay =indiaFlag.isDisplayed();
+		Constants.isDisplay = indiaFlag.isDisplayed();
 		return Constants.isDisplay;
 	}
 

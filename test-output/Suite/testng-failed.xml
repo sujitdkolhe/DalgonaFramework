@@ -3,24 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.amazon.pages.HeaderTests">
-        <methods>
-          <include name="tearTest"/>
-          <include name="quitDriver"/>
-          <include name="OpenBrowser"/>
-          <include name="HomePageTest_Report"/>
-          <include name="tc_01"/>
-        </methods>
-      </class> <!-- com.amazon.pages.HeaderTests -->
-=======
       <class name="com.amazon.pages.BestSellersPageTest">
         <methods>
           <include name="TC01"/>
           <include name="launchingBestSellersPage"/>
         </methods>
       </class> <!-- com.amazon.pages.BestSellersPageTest -->
->>>>>>> 69a61ef8017b6b4ea022d534a1932fae71d0bcfe
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
