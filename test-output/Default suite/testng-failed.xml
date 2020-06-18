@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.amazon.pages.HomePageTests">
+      <class name="com.amazon.pages.HeaderTests">
         <methods>
-          <include name="tc_13"/>
+          <include name="tearTest"/>
+          <include name="quitDriver"/>
           <include name="OpenBrowser"/>
+          <include name="HomePageTest_Report"/>
+          <include name="tc_01"/>
         </methods>
-      </class> <!-- com.amazon.pages.HomePageTests -->
+      </class> <!-- com.amazon.pages.HeaderTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
